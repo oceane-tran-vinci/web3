@@ -1,0 +1,13 @@
+/* src/Components/ClickCounter.css */
+.card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
