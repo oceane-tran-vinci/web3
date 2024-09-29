@@ -15,7 +15,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <ClickCounter /> {/* This is the ClickCounter component */}
+      {/* On passe un titre et un message en props */}
+      <ClickCounter title={"Click Counter Component"} message={"You are a master in the art of clicking !"}/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
