@@ -15,13 +15,17 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      {/* On passe un titre et un message en props */}
-      <ClickCounter title={"Click Counter Component"} message={"You are a master in the art of clicking !"}/>
+      {/* On passe un titre et un message en props + un hoverMessage*/}
+      <ClickCounter 
+        title={"Click Counter Component"} 
+        message={"You are a master in the art of clicking !"}
+        hoverMessage={"Please click on me now!"}// Message à afficher quand la souris est sur le bouton
+      />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
