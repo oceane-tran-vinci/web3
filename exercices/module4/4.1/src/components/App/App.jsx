@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const App = () => {
   // State for storing persons in the phonebook
-  const [persons, setPersons] = useState([{ name: 'Arto Hellas', number: '040-1234567' }]);
+  const [persons, setPersons] = useState([]);
   
   // State for storing the new name input
   const [newName, setNewName] = useState('');
   
   // State for storing the new number input
   const [newNumber, setNewNumber] = useState('');
+
+  // Fetch initial data from json-server
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/persons')
+      .then(response => {
+        setPersons(response.data);
+      });
+  }, []);
 
   // Handle changes in the name input field
   const handleNameChange = (event) => {
